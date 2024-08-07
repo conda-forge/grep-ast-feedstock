@@ -1,5 +1,5 @@
 {% set name = "grep-ast" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grep_ast-{{ version }}.tar.gz
-  sha256: d53bc7d25dfefafe77643fec189ab38e3cbd839d546c070a950ebedad82ee164
+  sha256: 42b8887d57301dc55634368f8d549e9c49c913dafb4d19c9b54c3ddb604fccf4
 
 build:
   entry_points:
