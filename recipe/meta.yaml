@@ -1,13 +1,13 @@
 {% set name = "grep-ast" %}
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grep_ast-{{ version }}.tar.gz
-  sha256: 42b8887d57301dc55634368f8d549e9c49c913dafb4d19c9b54c3ddb604fccf4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/grep_ast-{{ version }}.tar.gz
+  sha256: 0f59b62eed6843f78b425218394969550e2b06ec2d81dbf3b8efff0e1f002d7d
 
 build:
   entry_points:
@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
   run:
     - python >=3.6
     - tree_sitter_languages >=1.8.0
