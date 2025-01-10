@@ -15,15 +15,15 @@ build:
     - gast=grep_ast.main:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - tree_sitter_languages >=1.8.0
     - pathspec
 
@@ -36,6 +36,7 @@ test:
     - gast --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/paul-gauthier/grep-ast
