@@ -1,5 +1,5 @@
 {% set name = "grep-ast" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/grep_ast-{{ version }}.tar.gz
-  sha256: f7097ecf23437c04bc4ed708485b0d41894c1a9c4a9941159542b8c67c49a563
+  sha256: 24f7ecbb7615ba35039eecb8302b83bb7766dd3d77c5556894471726fafa64ed
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - gast=grep_ast.main:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
