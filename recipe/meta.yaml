@@ -38,7 +38,7 @@ test:
     - gast --help
   requires:
     - pip
-    - python >={{ python_min }}
+    - python {{ python_min }}.*
 
 about:
   home: https://github.com/paul-gauthier/grep-ast
