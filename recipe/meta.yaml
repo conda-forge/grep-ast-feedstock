@@ -24,7 +24,6 @@ requirements:
     - setuptools
   run:
     - tree-sitter-language-pack
-    - tree_sitter ==0.21.3
     - python >={{ python_min }}
     - tree_sitter_languages >=1.8.0
     - pathspec
@@ -38,7 +37,7 @@ test:
     - gast --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
 
 about:
   home: https://github.com/paul-gauthier/grep-ast
@@ -49,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - jan-janssen
+    - MementoRC
